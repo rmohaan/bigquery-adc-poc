@@ -1,0 +1,49 @@
+-- Creating the user_profiles table
+CREATE TABLE `project.dataset.user_profiles` (
+  user_id STRING NOT NULL,
+  first_name STRING,
+  last_name STRING,
+  email STRING,
+  age INT64,
+  country STRING,
+  signup_date DATE,
+  is_active BOOLEAN,
+  last_login TIMESTAMP
+);
+
+-- Inserting 20 dummy records
+INSERT INTO `project.dataset.user_profiles` (user_id, first_name, last_name, email, age, country, signup_date, is_active, last_login) VALUES
+('u001', 'John', 'Doe', 'john.doe@email.com', 28, 'USA', '2023-01-15', TRUE, '2025-07-16 10:30:00'),
+('u002', 'Jane', 'Smith', 'jane.smith@email.com', 34, 'Canada', '2023-02-20', TRUE, '2025-07-15 14:45:00'),
+('u003', 'Alice', 'Johnson', 'alice.j@email.com', 25, 'UK', '2023-03-10', FALSE, '2025-06-30 09:15:00'),
+('u004', 'Bob', 'Williams', 'bob.w@email.com', 41, 'Australia', '2023-04-05', TRUE, '2025-07-17 08:20:00'),
+('u005', 'Emma', 'Brown', 'emma.b@email.com', 29, 'Germany', '2023-05-12', TRUE, '2025-07-16 16:10:00'),
+('u006', 'Michael', 'Jones', 'michael.j@email.com', 36, 'France', '2023-06-18', FALSE, '2025-07-01 11:25:00'),
+('u007', 'Sarah', 'Davis', 'sarah.d@email.com', 22, 'Japan', '2023-07-22', TRUE, '2025-07-17 12:30:00'),
+('u008', 'David', 'Wilson', 'david.w@email.com', 45, 'Brazil', '2023-08-30', TRUE, '2025-07-16 13:40:00'),
+('u009', 'Laura', 'Moore', 'laura.m@email.com', 31, 'India', '2023-09-14', FALSE, '2025-07-10 15:50:00'),
+('u010', 'James', 'Taylor', 'james.t@email.com', 27, 'South Africa', '2023-10-25', TRUE, '2025-07-17 09:00:00'),
+('u011', 'Emily', 'Anderson', 'emily.a@email.com', 33, 'Mexico', '2023-11-11', TRUE, '2025-07-16 17:20:00'),
+('u012', 'Thomas', 'Martinez', 'thomas.m@email.com', 39, 'Spain', '2023-12-01', FALSE, '2025-07-05 10:10:00'),
+('u013', 'Olivia', 'Lee', 'olivia.l@email.com', 26, 'China', '2024-01-08', TRUE, '2025-07-17 11:15:00'),
+('u014', 'William', 'Garcia', 'william.g@email.com', 42, 'Italy', '2024-02-15', TRUE, '2025-07-16 14:25:00'),
+('u015', 'Sophia', 'Rodriguez', 'sophia.r@email.com', 30, 'Argentina', '2024-03-20', FALSE, '2025-07-08 12:35:00'),
+('u016', 'Daniel', 'Lopez', 'daniel.l@email.com', 35, 'Russia', '2024-04-10', TRUE, '2025-07-17 10:40:00'),
+('u017', 'Isabella', 'Hernandez', 'isabella.h@email.com', 24, 'South Korea', '2024-05-05', TRUE, '2025-07-16 15:55:00'),
+('u018', 'Matthew', 'Gonzalez', 'matthew.g@email.com', 38, 'Netherlands', '2024-06-12', FALSE, '2025-07-07 08:45:00'),
+('u019', 'Ava', 'Perez', 'ava.p@email.com', 29, 'Sweden', '2024-07-18', TRUE, '2025-07-17 13:50:00'),
+('u020', 'Ethan', 'Sanchez', 'ethan.s@email.com', 32, 'New Zealand', '2024-08-01', TRUE, '2025-07-16 16:00:00');
+
+-- Select query to retrieve all user profiles
+SELECT
+  user_id,
+  first_name,
+  last_name,
+  email,
+  age,
+  country,
+  signup_date,
+  is_active,
+  last_login
+FROM `project.dataset.user_profiles`
+ORDER BY signup_date;

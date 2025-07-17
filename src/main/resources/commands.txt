@@ -1,0 +1,4 @@
+gcloud auth login
+gcloud config set project your-project-id
+gcloud auth application-default set-quota-project your-project-id
+gcloud auth application-default print-access-token

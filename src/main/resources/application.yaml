@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    gcp:
+      project-id: test-pubsub-463217
+      credentials:
+        location: null  # Use Application Default Credentials (ADC)
