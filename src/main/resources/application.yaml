@@ -4,3 +4,10 @@ spring:
       project-id: test-pubsub-463217
       credentials:
         location: null  # Use Application Default Credentials (ADC)
+  pubsub:
+    subscriber:
+      subscription-name: test-subscription
+      auto-create-subscription: true
+    publisher:
+      topic-name: test-topic
+      auto-create-topic: true
